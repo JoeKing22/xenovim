@@ -3,8 +3,7 @@
 require("neo-tree").setup({
 
     -- Close if it is the last window
-    close_if_last_window = true,
-
+    close_if_last_window = false,
     -- Look And Feel
     popup_border_style = "rounded",
 
@@ -61,11 +60,11 @@ require("neo-tree").setup({
         added     = "✚", -- or "✚", but this is redundant info if you use git_status_colors on the name
         modified  = "", -- or "", but this is redundant info if you use git_status_colors on the name
         deleted   = "✖",-- this can only be used in the git_status source
-        renamed   = "",-- this can only be used in the git_status source
+        renamed   = "R",-- this can only be used in the git_status source
         -- Status type
         untracked = "",
         ignored   = "",
-        unstaged  = "",
+        unstaged  = "U",
         staged    = "",
         conflict  = "",
       }
@@ -74,6 +73,7 @@ require("neo-tree").setup({
   window = {
     position = "left",
     width = 40,
+    auto_expand_width = true, 
     mapping_options = {
       noremap = true,
       nowait = true,

@@ -22,6 +22,7 @@ keymap("n", "<F7>", "<cmd>2TermExec cmd='lazygit' go_back=0 direction=float <cr>
 -- Buffer Navigation
 keymap("n", "<S-l>", "<cmd>bnext<cr>", default_opts)
 keymap("n", "<S-h>", "<cmd>bprevious<cr>", default_opts)
+keymap("n", "<S-q>", "<cmd>bp<bar>sp<bar>bn<bar>bd<cr>", default_opts)
 
 -- File Operations
 keymap("n", "<C-s>", "<cmd>w<cr><cr>", default_opts)
