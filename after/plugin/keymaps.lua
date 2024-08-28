@@ -3,8 +3,8 @@ local default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
 -- Resizing panes
-keymap("n", "<C-Left>", ":vertical resize +2<CR>", default_opts)
-keymap("n", "<C-Right>", ":vertical resize -2<CR>", default_opts)
+keymap("n", "<C-Left>", ":vertical resize +5<CR>", default_opts)
+keymap("n", "<C-Right>", ":vertical resize -5<CR>", default_opts)
 keymap("n", "<C-Up>", ":resize -1<CR>", default_opts)
 keymap("n", "<C-Down>", ":resize +1<CR>", default_opts)
 
@@ -16,7 +16,6 @@ keymap("n", "<C-g>", ":Neotree toggle float git_status<cr>", default_opts) -- Sh
 -- ToggleTerm
 keymap("n", "<C-t>", ":ToggleTerm size=5 direction=float<cr>", default_opts)
 keymap("n", "<F9>", "<cmd>3TermExec size=50 cmd='todo' direction=vertical go_back=0 <CR>", default_opts)
-keymap("n", "<F8>", "<cmd>TermExec cmd='python' go_back=0 <CR>", default_opts)
 keymap("n", "<F7>", "<cmd>2TermExec cmd='lazygit' go_back=0 direction=float <cr>", default_opts)
 
 -- Buffer Navigation
@@ -29,8 +28,10 @@ keymap("n", "<C-s>", "<cmd>w<cr><cr>", default_opts)
 keymap("n", "<C-q>", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "<leader>qq", "<cmd>q<cr><cr>", default_opts)
 keymap("n", "|", "<cmd>vsplit<cr>", default_opts)
--- keymap("n", "\\", "<cmd>split<cr>", default_opts)
+keymap("n", "\\", "<cmd>split<cr>", default_opts)
+keymap("n", "<leader>bc", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_opts)
 
 -- Move lines up or down
 keymap("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
 keymap("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
+

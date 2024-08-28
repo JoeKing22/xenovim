@@ -1,11 +1,11 @@
 require('lualine').setup {
     options = {
         icons_enbaled = true,
-        theme = 'auto',
+        theme = 'monokai-pro',
         component_separators = { left = '>', right = '|' },
         section_separators = { left = ' ⋙  ', right = '⋘  ' },
         always_divide_middle = true,
-        globalstatus = false,
+        globalstatus = true,
         refresh = {
             statusline = 1000,
             tabline = 1000,

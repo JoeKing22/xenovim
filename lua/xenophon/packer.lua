@@ -16,6 +16,14 @@ return require('packer').startup(function(use)
     }
   }
 
+  -- Mason
+  use {
+      "williamboman/mason.nvim",
+      opts = {
+          "debugpy",
+      }
+  }
+
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -26,16 +34,17 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- Theme: Catppuccin
-  use { "catppuccin/nvim", as = "catppuccin" }
-  use { "rebelot/kanagawa.nvim" }
-  use { "sainnhe/gruvbox-material" }
-  use { "bluz71/vim-moonfly-colors" }
-  use { "sainnhe/sonokai" }
+  -- Theme: Monokai Pro
+  use { "loctvl842/monokai-pro.nvim" }
 
   -- Theme: TreeSitter
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use( 'nvim-treesitter/playground' )
+  use({
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      after = "nvim-treesitter",
+      requires = "nvim-treesitter/nvim-treesitter",
+  })
 
   -- File Management: Harpoon - bookmark files
   use( 'theprimeagen/harpoon' )
@@ -116,7 +125,12 @@ use({
   requires = {
     "MunifTanjim/nui.nvim",
     "rcarriga/nvim-notify",
-    }
+  },
+  config = {
+      lsp = {
+          hover = false
+      }
+  }
 })
 
 -- VIMBEGOOD
@@ -140,8 +154,31 @@ use { "ggandor/flit.nvim",
 -- Git Blame
 use "APZelos/blamer.nvim"
 
--- Coc
-use "neoclide/coc.nvim"
+-- dap
+use { "mfussenegger/nvim-dap-python",
+    requires = {
+        { "nvim-neotest/nvim-nio" },
+        { "mfussenegger/nvim-dap" },
+        { "rcarriga/nvim-dap-ui" },
+    }
+}
+
+use { "rcarriga/nvim-dap-ui",
+    requires = {
+        { "mfussenegger/nvim-dap" },
+    }
+}
+
+-- Yuck (Used for Eww Widgets)
+use { "elkowar/yuck.vim" }
+
+-- Bufferline
+use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
+-- Mini.ai (vim motions)
+use {'echasnovski/mini.ai'}
+
+
+
 
 end)
-
