@@ -2,7 +2,7 @@ local lsp = require("lsp-zero")
 vim.lsp.set_log_level "off"
 lsp.preset("recommended")
 lsp.ensure_installed({
-  'tsserver',
+  'ts_ls',
   'rust_analyzer',
   'html',
   'luau_lsp',

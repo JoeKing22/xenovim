@@ -178,7 +178,15 @@ use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devico
 -- Mini.ai (vim motions)
 use {'echasnovski/mini.ai'}
 
+--- Conform formatter
+use { "stevearc/conform.nvim",
+     branch = 'nvim-0.9',
+     config = function()
+           require("conform").setup()
+     end,
+}
 
-
+--- Nvim lint
+use {'mfussenegger/nvim-lint'}
 
 end)

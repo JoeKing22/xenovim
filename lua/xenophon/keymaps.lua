@@ -62,3 +62,13 @@ vim.keymap.set("n", "<leader><leader>oy", "<cmd> lua _G.ObsidianYesterday() <CR>
 vim.keymap.set("n", "<leader><leader>ott", "<cmd> lua _G.ObsidianTomorrow() <CR>")
 -- Workspace
 vim.keymap.set("n", "<leader><leader>ow", "<cmd> lua _G.ObsidianWorkspace() <CR>")
+
+--- Conform
+local conform = require('conform') 
+vim.keymap.set( "n" , "<leader>mp", function()
+      conform.format({
+        lsp_fallback = true,
+        async = false,
+        timeout_ms = 1000,
+      })
+    end, { desc = "Format file or range (in visual mode)" })
