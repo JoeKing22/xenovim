@@ -14,7 +14,7 @@ vim.g.dap_open_float = false;
 
 dap.adapters.python = {
   type = 'executable',
-  command = '/home/xenophon/Development/.virtualenvs/debugpy/bin/python',
+  command = '/home/lukas/Development/venvs/debugpy/bin/python',
   args = { '-m', 'debugpy.adapter' },
 }
 
@@ -22,38 +22,25 @@ dap.configurations.python = {
   {
     type = 'python',
     request = 'launch',
-    name = 'Odoo 9',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo.py',
-    pythonPath = "/home/xenophon/Development/TaskFlow/venv/odoo-9/bin/python",
-    args = {
-            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-9.conf',
-            '--limit-time-real=10000000',
-    }, -- Adjust arguments as needed
-    cwd = '${workspaceFolder}',
-    console = "externalTerminal",
-  },
-  {
-    type = 'python',
-    request = 'launch',
     name = 'Odoo 12',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
-    pythonPath = "/home/xenophon/Development/TaskFlow/venv/odoo-12/bin/python",
+    program = '/home/lukas/Development/odev/odoo/odoo-bin',
+    pythonPath = "/home/lukas/Development/venvs/odoo12/bin/python",
     args = {
-            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-12.conf',
+            '--config=/home/lukas/Development/odev/configs/odoo12.conf',
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    -- console = "internalConsole",
-    console = "externalTerminal",
+    console = "internalConsole",
+    -- console = "externalTerminal",
   },
   {
     type = 'python',
     request = 'launch',
     name = 'Odoo 13',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
-    pythonPath = "/home/xenophon/Development/TaskFlow/venv/odoo-13/bin/python3",
+    program = '/home/lukas/Development/odev/odoo/odoo-bin',
+    pythonPath = "/home/lukas/Development/odev/venvs/odoo13/bin/python3",
     args = {
-            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-13.conf',
+            '--config=/home/lukas/Development/odev/configs/odoo-server-13.conf',
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
@@ -63,24 +50,24 @@ dap.configurations.python = {
     type = 'python',
     request = 'launch',
     name = 'Odoo 14',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
-    pythonPath = "/home/xenophon/Development/TaskFlow/venv/odoo-14/bin/python3",
+    program = '/home/lukas/Development/odev/odoo/odoo-bin',
+    pythonPath = "/home/lukas/Development/venvs/odoo14/bin/python3",
     args = {
-            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-14.conf',
+            '--config=/home/lukas/Development/odev/configs/odoo14.conf',
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
     -- console = "internalConsole",
-    console = "externalTerminal",
+    -- console = "externalTerminal",
   },
   {
     type = 'python',
     request = 'launch',
     name = 'Odoo 12 Test',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
-    pythonPath = "/home/xenophon/Development/TaskFlow/venv/odoo-12/bin/python3",
+    program = '/home/lukas/Development/odev/odoo/odoo-bin',
+    pythonPath = "/home/lukas/Development/odev/venv/odoo-12/bin/python3",
     args = {
-            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-12.conf',
+            '--config=/home/lukas/Development/odev/configs/odoo-server-12.conf',
             '--test-enable',
             '--log-level=test',
             '--limit-time-real=10000000',
@@ -92,10 +79,10 @@ dap.configurations.python = {
     type = 'python',
     request = 'launch',
     name = 'Odoo 14 Test',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
-    pythonPath = "/home/xenophon/Development/TaskFlow/venv/odoo-14/bin/python3",
+    program = '/home/lukas/Development/odev/odoo/odoo-bin',
+    pythonPath = "/home/lukas/Development/odev/venv/odoo-14/bin/python3",
     args = {
-            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-14.conf',
+            '--config=/home/lukas/Development/odev/configs/odoo-server-14.conf',
             '--test-enable',
             '--log-level=test',
             '--limit-time-real=10000000',
@@ -107,10 +94,10 @@ dap.configurations.python = {
     type = 'python',
     request = 'launch',
     name = 'Runbot 14',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
-    pythonPath = "/home/xenophon/Development/TaskFlow/venv/runbot14/bin/python3",
+    program = '/home/lukas/Development/odev/odoo/odoo-bin',
+    pythonPath = "/home/lukas/Development/odev/venv/runbot14/bin/python3",
     args = {
-            '--config=/home/xenophon/Development/TaskFlow/configs/odoo-server-14-runbot.conf',
+            '--config=/home/lukas/Development/odev/configs/odoo-server-14-runbot.conf',
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
@@ -120,7 +107,7 @@ dap.configurations.python = {
     type = 'python',
     request = 'launch',
     name = 'Odoo 18',
-    program = '/home/xenophon/Development/TaskFlow/odoo/odoo-bin',
+    program = '/home/lukas/Development/odev/odoo/odoo-bin',
     pythonPath = "/home/xenophon/Development/Personal/venv/odoo-18/bin/python3",
     args = {
             '--config=/home/xenophon/Development/Personal/configs/odoo-server-18.conf',

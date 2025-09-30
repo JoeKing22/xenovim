@@ -176,6 +176,6 @@ return {
     hi DiagnosticVirtualTextTextWarn gui=ITALIC cterm=ITALIC
     ]])
     vim.cmd([[hi Cursor guibg=red]])
-    vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
+    -- vim.cmd([[set guicursor=n-v-c:block-Cursor/lCursor]])
     end,
 }

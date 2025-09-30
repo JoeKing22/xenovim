@@ -27,7 +27,7 @@ return {
             -- can be used with or without `nvim-ufo`
             pauseFoldsOnSearch = true,
             foldKeymaps = {
-                setup = true, -- modifies `h` and `l`
+                setup = false, -- modifies `h` and `l` for autofold
                 hOnlyOpensOnFirstColumn = false,
             },
 
