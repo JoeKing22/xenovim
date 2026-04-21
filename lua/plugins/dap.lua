@@ -6,6 +6,6 @@ return {
         { "rcarriga/nvim-dap-ui" },
     },
     config = function()
-        require('dap-python').setup('/home/xenophon/Development/.virtualenvs/debugpy/bin/python')
+        require('dap-python').setup('/home/lukas/Development/venvs/debugpy/bin/python')
     end,
 }

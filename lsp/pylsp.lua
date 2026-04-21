@@ -1,34 +1,38 @@
+-- For ruff (in the cmd venv) pip3 install 'python-lsp-server[all]' ruff python-lsp-ruff
 return {
-    cmd = { 'pylsp' },
+    cmd = { '/home/lukas/Development/venvs/debugpy/bin/pylsp' },
     filetypes = { 'python' },
     settings = {
         pylsp = {
-            configurationSources = { 'flake8' },
+            -- configurationSources = { 'ruff' },
             plugins = {
                 flake8 = {
                     enabled = false,
                     ignore = { 'E501', 'E231' },
                     maxLineLength = 88,
                 },
-                black = {enabled = true},
+                black = {enabled = false},
                 autopep8 = { enabled = false },
-                mccabe = {enabled = true},
-                pycodestyle = {
+                ruff = { 
                     enabled = true,
+                },
+                mccabe = {enabled = false},
+                pycodestyle = {
+                    enabled = false,
                     ignore = { 'E501', 'E231' },
                     maxLineLength = 88,
                 },
-                pyflakes = {enabled = true},
+                pyflakes = {enabled = false},
                 jedi_completion = {
                     include_params = true,
                 },
-                jedi_signature_help = {enabled = true},
+                jedi_signature_help = {enabled = false},
                 jedi = {
                     extra_paths = {
-                        '/home/xenophon/Development/TaskFlow/',
-                        '/home/xenophon/Development/TaskFlow/odoo/',
-                        '/home/xenophon/Development/TaskFlow/taskflow/',
-                        '/home/xenophon/Development/TaskFlow/taskflow-config/'
+                        '/home/lukas/Development/odev/',
+                        '/home/lukas/Development/odev/odoo/',
+                        '/home/lukas/Development/odev/taskflow/',
+                        '/home/lukas/Development/odev/taskflow-config/'
                     },
                 },
             },
@@ -40,5 +44,5 @@ return {
         'pyproject.toml',
         'requirements.txt',
     },
-    -- root_dir = "/home/xenophon/Development/",
+    -- root_dir = "/home/lukas/Development/",
 }

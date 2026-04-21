@@ -57,7 +57,7 @@ dap.configurations.python = {
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    -- console = "internalConsole",
+    console = "internalConsole",
     -- console = "externalTerminal",
   },
   {
@@ -65,15 +65,15 @@ dap.configurations.python = {
     request = 'launch',
     name = 'Odoo 12 Test',
     program = '/home/lukas/Development/odev/odoo/odoo-bin',
-    pythonPath = "/home/lukas/Development/odev/venv/odoo-12/bin/python3",
+    pythonPath = "/home/lukas/Development/venvs/odoo12/bin/python",
     args = {
-            '--config=/home/lukas/Development/odev/configs/odoo-server-12.conf',
+            '--config=/home/lukas/Development/odev/configs/odoo12.conf',
             '--test-enable',
             '--log-level=test',
             '--limit-time-real=10000000',
     },
     cwd = '${workspaceFolder}',
-    console = "externalTerminal",
+    console = "internalConsole",
   },
   {
     type = 'python',
@@ -108,13 +108,14 @@ dap.configurations.python = {
     request = 'launch',
     name = 'Odoo 18',
     program = '/home/lukas/Development/odev/odoo/odoo-bin',
-    pythonPath = "/home/xenophon/Development/Personal/venv/odoo-18/bin/python3",
+    pythonPath = "/home/lukas/Development/venvs/odoo18/bin/python3",
     args = {
-            '--config=/home/xenophon/Development/Personal/configs/odoo-server-18.conf',
+            '--config=/home/lukas/Development/personal/configs/odoo18.conf',
             '--limit-time-real=10000000',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "externalTerminal",
+    -- console = "externalTerminal",
+    console = "internalConsole",
   },
 }
 dap.set_log_level('DEBUG')

@@ -5,6 +5,6 @@ return {
                 enable = false;
             }
         },
-        root_dir = "/home/xenophon/Development/"
+        root_dir = "/home/lukas/Development/"
     }
 }

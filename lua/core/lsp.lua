@@ -1,12 +1,17 @@
 local hover = vim.lsp.buf.hover
 
+-- vim.lsp.enable({
+--     'gopls',
+--     'lua_ls',
+--     'odoo_lsp',
+--     'pylsp',
+--     'pyrefly',
+--     'rust_analyzer',
+--     'ts_ls',
+-- })
+
 vim.lsp.enable({
-    'gopls',
-    'lua_ls',
-    'odoo_lsp',
     'pylsp',
-    'pyrefly',
-    'rust_analyzer',
     'ts_ls',
 })
 

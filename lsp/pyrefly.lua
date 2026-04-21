@@ -10,7 +10,7 @@ return {
     --     "Pipfile",
     --     ".git",
     -- },
-    root_dir = "/home/xenophon/Development/",
+    root_dir = "/home/lukas/Development/",
     filetypes = { "python" },
     settings = {},
     on_exit = function(code, _, _)
