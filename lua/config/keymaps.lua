@@ -33,14 +33,6 @@ vim.keymap.set("n", "<leader>bc", "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", default_op
 vim.keymap.set("n", "<A-j>", "<cmd>m .+1<CR>", default_opts)
 vim.keymap.set("n", "<A-k>", "<cmd>m .-2<CR>", default_opts)
 
--- Copilot
-vim.keymap.set("n", "<leader>coo", "<cmd>Copilot disable<cr>", default_opts)
-vim.keymap.set("n", "<leader>cee", "<cmd>Copilot enable<cr>", default_opts)
-vim.keymap.set('i', '<C-l>', 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false
-})
-
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- Search File by name
 vim.keymap.set('n', '<leader>lg', builtin.live_grep, {}) -- Search Grep
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {}) -- Search Buffers

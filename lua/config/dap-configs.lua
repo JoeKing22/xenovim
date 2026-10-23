@@ -80,15 +80,15 @@ dap.configurations.python = {
     request = 'launch',
     name = 'Odoo 14 Test',
     program = '/home/lukas/Development/odev/odoo/odoo-bin',
-    pythonPath = "/home/lukas/Development/odev/venv/odoo-14/bin/python3",
+    pythonPath = "/home/lukas/Development/venvs/odoo14/bin/python3",
     args = {
-            '--config=/home/lukas/Development/odev/configs/odoo-server-14.conf',
-            '--test-enable',
-            '--log-level=test',
+            '--config=/home/lukas/Development/odev/configs/odoo14.conf',
             '--limit-time-real=10000000',
+            '--test-enable',
     }, -- Adjust arguments as needed
     cwd = '${workspaceFolder}',
-    console = "externalTerminal",
+    console = "internalConsole",
+    -- console = "externalTerminal",
   },
   {
     type = 'python',
